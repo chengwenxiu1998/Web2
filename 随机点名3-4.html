@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8"/>
+	<title>Document</title>
+	<style>
+		#box{
+			font-size: 150px;
+			text-align: center;
+			line-height: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">按任意键开始滚动</div>
+</body>
+
+<script type="text/javascript">
+	var str = `夏桐
+白晨皓
+丁泽仁
+康丽娜
+齐放
+杨影
+杨茜
+尹雨佳
+徐安
+郭艳霞
+刘琪
+金奕含
+黄瑾然
+李岱恒
+刘阳
+李晔欣
+孙程程
+管欣悦
+迟国强
+李佳伟
+李密浩
+尹璐
+唐溪
+李栋良
+武升辉
+张胜然
+陈琛
+张正扬
+孙鑫鑫
+王慧
+王碧云
+李叶
+陈若云
+刘子雪
+李洁
+侯梦媛
+王云弟
+闫正伟
+柳海源
+刘宸
+孙晓雪
+熊毅
+赵芊伊
+卜冬晓
+李其林
+高志阳
+熊振宇
+王庭恩
+刘英杰
+韩锋
+王鑫钰
+李敬单
+王澎源
+金鼎龙
+卓必诚
+刘子璇
+于俊伟
+孙亦璇
+王浩馨
+路昊鹏
+康润芳
+赵娜
+孙东东
+刘雪晴
+王洁
+张鑫媛
+刘金辀
+李建辉
+王凯
+王昊
+徐昌隆
+王晓双
+侯苏洪
+李文轩
+王得润
+冯世祺
+王志岗
+霍宁肖
+马硕
+靳若琪
+于洋
+赵宸
+毛琳欣
+刘曼
+刘兆康
+李海亮
+赵旭
+户子超
+程文秀
+刘文轩
+王紫薇
+李美情
+徐利媛
+陆贺松
+程子健
+李润川
+姚朵
+倪泽苒
+张晓
+宋莹然
+龙倩谊`;
+	var arr = str.split('\n');
+	var box = document.getElementById('box');
+	var i = 0;
+	var flag = true;
+	var timer;
+	function loop(){
+		box.innerHTML = arr[i++];
+		i>=arr.length&&(i=0);
+	}
+	document.onkeydown = function(){
+		flag?timer = setInterval(loop,5):clearInterval(timer);
+		flag = !flag;
+	}  
+</script>
+<ml>
