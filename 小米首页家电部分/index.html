@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>小米家电</title>
+	<style>
+		#box{
+			background:#ccc;
+			height:614px;
+			text-align:center;
+		}
+		#bigimg{
+			margin-left:30px;
+			margin-right:20px;
+			float:left;
+		}
+		.image,.imagefinally{
+			float:left;
+			width:235px;
+			height:280px;
+			background:white;
+			margin-top:20px;
+			margin-right:16px;
+		}
+		.imagefinally img{
+			width:200px;
+			height:100px;
+			display:block;
+		}
+		.writing1{
+			display:none;
+			background:orange;
+			width:235px;
+			height:80px;
+			margin-bottom:0px;
+			position:relative;
+			bottom:60px;
+		}
+		.writing2{
+			display:block;
+			background:orange;
+			width:235px;
+			height:80px;
+			margin-bottom:0px;
+			position:relative;
+			bottom:60px;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="box">
+		<img src="0.jpg" id="bigimg"/>
+
+		<div class="image">
+			<img src="1.jpg"/><br/>
+			小米电视A4&nbsp;32
+			<p class="writing1">特用了一段时间才来评价的，很值得赞的。</p>
+		</div>
+		<div class="image">
+			<img src="2.png"/><br/>
+			小米电视4A 43英寸
+			<p class="writing1">特用了一段时间才来评价的，很值得赞的。</p>
+		</div>
+		<div class="image">
+			<img src="3.jpg"/><br/>
+			小米电视4A 49英寸
+			<p class="writing1">特用了一段时间才来评价的，很值得赞的。</p>
+		</div>
+		<div class="image">
+			<img src="4.jpg"/><br/>
+			小米电视4A 49英寸
+			<p class="writing1">特用了一段时间才来评价的，很值得赞的。</p>
+		</div>
+		<div class="image">
+			<img src="5.jpg"/><br/>
+			小米电视4A 49英寸
+			<p class="writing1">特用了一段时间才来评价的，很值得赞的。</p>
+		</div>
+		<div class="image">
+			<img src="6.jpg"/><br/>
+			小米电视4A 49英寸
+			<p class="writing1">特用了一段时间才来评价的，很值得赞的。</p>
+		</div>
+		<div class="image">
+			<img src="7.jpg"/><br/>
+			小米电视4A 49英寸
+			<p class="writing1">特用了一段时间才来评价的，很值得赞的。</p>
+		</div>
+		<div class="imagefinally">
+			<img src="8.png" class="imagelittle"/><br/>
+			<img src="9.png" class="imagelittle"/>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript">
+			var boxes=document.getElementsByClassName("image");
+			for(var i=0;i<boxes.length;i++){
+				boxes[i].onmouseover=function(){
+					console.log(this.children[2].className);
+					this.children[2].className="writing2";
+
+				}
+				boxes[i].onmouseout=function(){
+					this.children[2].className="writing1";
+					
+				}
+			}
+		
+	</script>
+</body>
+</html>
